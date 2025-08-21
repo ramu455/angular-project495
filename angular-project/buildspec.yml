@@ -9,15 +9,15 @@ phases:
 
   pre_build:
     commands:
-      - cd angular-project495/angular-project
+      - cd angular-project
       - npm install
 
   build:
     commands:
-      - cd angular-project495/angular-project
+      - cd angular-project
       - ng build --prod
 
 artifacts:
-  base-directory: "angular-project495/angular-project/dist/my-angular-project"
+  base-directory: "angular-project/dist/my-angular-project"
   files:
     - "**/*"
