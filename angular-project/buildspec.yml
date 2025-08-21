@@ -16,7 +16,7 @@ phases:
 
   build:
     commands:
-      - ng build --prod
+      - ng build 
 
 artifacts:
   base-directory: "dist/my-angular-project"
