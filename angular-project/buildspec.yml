@@ -18,6 +18,5 @@ phases:
       - ng build
 
 artifacts:
-  base-directory: "dist/my-angular-project"
-  files:
-    - "**/*"
+    commands:
+      - aws s3 cp dist/my-angular-project/ s3://deploymentbucket495 --recursive
