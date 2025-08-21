@@ -5,8 +5,8 @@ phases:
     runtime-versions:
       nodejs: 12
     commands:
-        cd angular-project
-      - npm install -g @angular/cli@9.0.6
+        cd angular-project;
+      - npm install -g @angular/cli@9.0.6; ng version
 
   pre_build:
     commands:
