@@ -10,6 +10,8 @@ phases:
   pre_build:
     commands:
       - npm install
+       - pwd
+       - ls -R
 
   build:
     commands:
