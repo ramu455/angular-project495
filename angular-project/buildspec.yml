@@ -11,9 +11,10 @@ phases:
   pre_build:
     commands:
       - npm install
-       - pwd
-       - ls -R
-       ng version
+    commands:
+      - pwd
+      - ls -R
+      - ng version
 
   build:
     commands:
