@@ -9,13 +9,13 @@ phases:
 
   pre_build:
     commands:
+        cd angular-project
       - npm install
        - pwd
        - ls -R
 
   build:
     commands:
-        cd angular-project495/angular-project
       - ng build --prod
 
 artifacts:
