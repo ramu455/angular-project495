@@ -13,6 +13,7 @@ phases:
       - npm install
        - pwd
        - ls -R
+       ng version
 
   build:
     commands:
