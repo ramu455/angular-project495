@@ -9,6 +9,7 @@ phases:
 
   pre_build:
     commands:
+        cd angular-project
       - npm install
 
   build:
@@ -26,5 +27,5 @@ phases:
 
 artifacts:
   files:
-    - "dist/my-angular-project/**/*"
-    - appspec.yml
+    - angular-project/dist/my-angular-project/**/*
+    - angular-project/appspec.yml
