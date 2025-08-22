@@ -14,3 +14,7 @@ permissions:
     type: 
       - directory
       - file
+hooks:
+  AfterInstall:
+    - location: ./hooks/after_install.sh
+      timeout: 60

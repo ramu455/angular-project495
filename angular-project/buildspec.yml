@@ -29,3 +29,4 @@ artifacts:
   files:
     - angular-project/dist/my-angular-project/**/*
     - angular-project/appspec.yml
+    - hooks/**/*
