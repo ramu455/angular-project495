@@ -9,12 +9,12 @@ phases:
 
   pre_build:
     commands:
-        cd angular-project
+      - cd angular-project
       - npm install
 
   build:
     commands:
-        cd angular-project
+      - cd angular-project
       - ng build 
 
   # post_build:
