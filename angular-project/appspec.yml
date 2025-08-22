@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+
+files:
+  - source: ./dist/my-angular-project/
+    destination: /var/www/html
+
+permissions:
+  - object: /var/www/html
+    pattern: '**'
+    mode: 755
+    owner: root
+    group: root
+    type: 
+      - directory
+      - file
