@@ -18,7 +18,7 @@ phases:
 
   post_build:
     commands:
-      - aws s3 cp dist/my-angular-project s3://b10-code-pipeline-website-prod-bucket --recursive
+      - aws s3 cp dist/my-angular-project s3://deploymentbucket495 --recursive
 
 # artifacts:
 #   base-directory: "dist/my-angular-project"
@@ -30,4 +30,5 @@ phases:
 #     - angular-project/dist/my-angular-project/**/*
 #     - angular-project/appspec.yml
 #     - hooks/**/*
+
 
