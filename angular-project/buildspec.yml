@@ -36,8 +36,10 @@ version: 0.2
 
 env:
   variables:
-    DOCKERHUB_TOKEN: "dckr_pat_8iDau_K7OySmi2AC98bP7wK_qek"
-    DOCKERHUB_USER: "Ramu455"
+    parameter-store:
+    DOCKERHUB_USER: /docker/username
+  secrets-manager:
+    DOCKERHUB_TOKEN: credentials:token
 
 phases:
   pre_build:
@@ -52,6 +54,7 @@ phases:
     commands:
       - docker tag my-angular-app:latest ${DOCKERHUB_USER}/angular-docker-repo-bill:latest
       - docker push ${DOCKERHUB_USER}/angular-docker-repo-bill:latest
+
 
 
 
