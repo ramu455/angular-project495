@@ -51,5 +51,5 @@ phases:
 
   post_build:
     commands:
-      - docker tag my-angular-app:latest ${DOCKERHUB_USER}/angular-docker-repo-bill:${CODEBUILD_BUILD_NUMBER}
+      - docker tag my-angular-app:${CODEBUILD_BUILD_NUMBER} ${DOCKERHUB_USER}/angular-docker-repo-bill:${CODEBUILD_BUILD_NUMBER}
       - docker push ${DOCKERHUB_USER}/angular-docker-repo-bill:${CODEBUILD_BUILD_NUMBER}
