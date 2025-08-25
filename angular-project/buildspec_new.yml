@@ -53,3 +53,8 @@ phases:
     commands:
       - docker tag my-angular-app:${CODEBUILD_BUILD_NUMBER} ${DOCKERHUB_USER}/angular-docker-repo-bill:${CODEBUILD_BUILD_NUMBER}
       - docker push ${DOCKERHUB_USER}/angular-docker-repo-bill:${CODEBUILD_BUILD_NUMBER}
+      - printf '[{"name":"angular","imageUri":"%s"}]' docker.io/ramu455/angular-docker-repo-bill:${CODEBUILD_BUILD_NUMBER} > UpdatedTaskDefinition.json
+
+artifacts:
+  files:
+    - UpdatedTaskDefination.json
