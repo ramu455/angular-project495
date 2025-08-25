@@ -38,21 +38,31 @@ env:
   parameter-store:
     DOCKERHUB_USER: "/docker/username"   
   secrets-manager:
-    DOCKERHUB_TOKEN: "credentials:token" 
+    DOCKERHUB_TOKEN: "credentials:token"
 
 phases:
   pre_build:
     commands:
-      - echo ${DOCKERHUB_TOKEN} | docker login -u ${DOCKERHUB_USER} --password-stdin
+      - echo "===== DEBUG: Checking env variables ====="
+      - echo "DOCKERHUB_USER=${DOCKERHUB_USER}"
+      - echo "DOCKERHUB_TOKEN length=${#DOCKERHUB_TOKEN}"
+      - echo -n ${DOCKERHUB_TOKEN} | docker login -u ${DOCKERHUB_USER} --password-stdin
+      - echo "===== Docker login completed ====="
 
   build:
     commands:
+      - echo "===== Build phase started ====="
       - docker build -t my-angular-app:latest .
+      - echo "===== Build phase completed ====="
 
   post_build:
     commands:
+      - echo "===== Post-build phase started ====="
       - docker tag my-angular-app:latest ${DOCKERHUB_USER}/angular-docker-repo-bill:latest
       - docker push ${DOCKERHUB_USER}/angular-docker-repo-bill:latest
+      - echo "===== Post-build completed ====="
+
+
 
 
 
