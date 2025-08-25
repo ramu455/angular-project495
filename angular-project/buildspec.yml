@@ -36,7 +36,7 @@ version: 0.2
 
 env:
   parameter-store:
-    DOCKERHUB_USER: "/docker/username"   
+    DOCKERHUB_USER: "/docker/username"
   secrets-manager:
     DOCKERHUB_TOKEN: "credentials:token"
 
@@ -61,16 +61,3 @@ phases:
       - docker tag my-angular-app:latest ${DOCKERHUB_USER}/angular-docker-repo-bill:latest
       - docker push ${DOCKERHUB_USER}/angular-docker-repo-bill:latest
       - echo "===== Post-build completed ====="
-
-
-
-
-
-
-
-
-
-
-
-
-
