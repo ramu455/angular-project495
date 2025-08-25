@@ -46,6 +46,7 @@ phases:
 
   build:
     commands:
+      - cd angular-project
       - docker build -t my-angular-app:${CODEBUILD_BUILD_NUMBER} .
 
   post_build:
