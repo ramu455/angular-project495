@@ -37,7 +37,7 @@ env:
   parameter-store:
     DOCKERHUB_USER: "/docker/username"
   secrets-manager:
-    DOCKERHUB_TOKEN: "password:password"
+    DOCKERHUB_TOKEN: "credentials:token"
 
 phases:
   pre_build:
