@@ -31,7 +31,7 @@
 #     - angular-project/appspec.yml
 #     # - hooks/**/*
 
-# version: 0.2
+version: 0.2
 
 env:
   parameter-store:
